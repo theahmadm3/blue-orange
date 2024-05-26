@@ -7,7 +7,7 @@ function Researches() {
 
     return (
         <section className="pa2 flex flex-column justify-between" id="projects">
-            <h2 className="w-100 tc">Our Projects</h2>
+            <h1 className="w-100 tc">Some of our researches</h1>
             <div className="mt2 mb2 pb2 overflow-auto inline-flex justify-between" style={{ minHeight: '400px' }}>
                 {images.map((research, index) => (
                     <div
