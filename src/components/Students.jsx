@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 function Students() {
     const rows = students.map((student) => (
-        <TableRow key={student.name}>
+        <TableRow hover key={student.name}>
             <TableCell>
-                <Link to={`student/${student.id}`} className='link black inline-flex justify-between items-center'>
+                <Link to={`student/${student.id}/#profile`} className='outline-0 link color-inherit inline-flex justify-between items-center'>
                     <Avatar src={student.avatar} />
                     <div className='ml2'>
                         <p className=''>{student.name}</p>
@@ -26,14 +26,14 @@ function Students() {
     ));
 
     return (
-        <section id="w-100">
-            <h1 className="tc w-100 bg-white">Our Candidates</h1>
+        <section id="students" className='w-100'>
+            <h1 className="tc w-100">Our Candidates</h1>
             <div className='w-100 inline-flex justify-center items-center pa2'>
                 <div className='ba br-pill pl2 pr2 pa1 w-40-l w-60-m w-80 inline-flex justify-start items-center'>
                     <i className="material-icons">search</i>
                     <input
                         type="search"
-                        className="bn outline-0 w-90"
+                        className="bn outline-0 w-90 pt2 pb2"
                         placeholder="search"
                     />
                 </div>
@@ -42,9 +42,9 @@ function Students() {
                 <Table stickyHeader>
                     <TableHead>
                         <TableRow>
-                            <TableCell style={{ fontWeight: 'bold', color: 'black' }}>Name</TableCell>
-                            <TableCell style={{ fontWeight: 'bold', color: 'black' }}>Research Area</TableCell>
-                            <TableCell style={{ fontWeight: 'bold', color: 'black' }}>Contact</TableCell>
+                            <TableCell style={{ fontWeight: 'bold' }}>Name</TableCell>
+                            <TableCell style={{ fontWeight: 'bold' }}>Research Area</TableCell>
+                            <TableCell style={{ fontWeight: 'bold' }}>Contact</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>{rows}</TableBody>

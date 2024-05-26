@@ -48,7 +48,7 @@ function HeroSection() {
                 id='home'
                 style={sectionStyles}
             >
-                <div className="overlay vh-75 pl5-l pt5-l">
+                <div className="overlay white vh-75 pl5-l pt5-l">
                         <h1 className={`fade-in white ${showHeading1 ? 'visible' : 'hidden'}`}>
                             PhD Lab
                         </h1>
