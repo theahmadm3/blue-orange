@@ -1,105 +1,52 @@
 import { Avatar, Group, Text } from '@mantine/core';
 import { Table, TableCell, TableContainer, TableHead, TableRow, TableBody } from '@mui/material';
 
-const data = [
-    {
-        avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png',
-        name: 'Robert Wolfkisser',
-        job: 'Engineer',
-        email: 'rob_wolf@gmail.com',
-        rate: 22,
-    },
-    {
-        avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png',
-        name: 'Jill Jailbreaker',
-        job: 'Engineer',
-        email: 'jj@breaker.com',
-        rate: 45,
-    },
-    {
-        avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png',
-        name: 'Henry Silkeater',
-        job: 'Designer',
-        email: 'henry@silkeater.io',
-        rate: 76,
-    },
-    {
-        avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png',
-        name: 'Bill Horsefighter',
-        job: 'Designer',
-        email: 'bhorsefighter@gmail.com',
-        rate: 15,
-    },
-    {
-        avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png',
-        name: 'Jeremy Footviewer',
-        job: 'Manager',
-        email: 'jeremy@foot.dev',
-        rate: 98,
-    },
-    {
-        avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png',
-        name: 'Jeremy Footviewer',
-        job: 'Manager',
-        email: 'jeremy@foot.dev',
-        rate: 98,
-    },
-    {
-        avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png',
-        name: 'Jeremy Footviewer',
-        job: 'Manager',
-        email: 'jeremy@foot.dev',
-        rate: 98,
-    },
-    {
-        avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png',
-        name: 'Jeremy Footviewer',
-        job: 'Manager',
-        email: 'jeremy@foot.dev',
-        rate: 98,
-    },
-];
+import { students } from '../data/students';
+import { Link } from 'react-router-dom';
 
 function Students() {
-    const rows = data.map((item) => (
-        <TableRow key={item.name}>
+    const rows = students.map((student) => (
+        <TableRow key={student.name}>
             <TableCell>
                 <Group gap="sm">
-                    <Avatar size={40} src={item.avatar} radius={40} />
+                    <Avatar size={40} src={student.avatar} radius={40} />
                     <div>
                         <Text fz="sm" fw={500}>
-                            {item.name}
+                            {student.id === 1 ? student.name : (
+                                <Link to={`student/${student.id}`} className='link black'>
+                                    {student.name}
+                                </Link>
+                            )}
                         </Text>
-                        <Text c="dimmed" fz="xs">
-                            {item.job}
-                        </Text>
+
                     </div>
                 </Group>
             </TableCell>
             <TableCell>
-                <Text fz="sm">${item.rate.toFixed(1)} / hr</Text>
                 <Text fz="xs" c="dimmed">
-                    Rate
+                    {student.topic}
                 </Text>
             </TableCell>
             <TableCell>
-                <Text fz="sm">{item.email}</Text>
-                <Text fz="xs" c="dimmed">
-                    Email
-                </Text>
+                <Text fz="sm">{student.email}</Text>
             </TableCell>
         </TableRow>
     ));
 
     return (
-        <section id="students">
-            <h1 className="tc w-100 bg-white">Our Students</h1>
+        <section id="students w-100 flex flex-column students-center justify-center">
+            <h1 className="tc w-100 bg-white">Our Candidates</h1>
+            <input
+                type="search"
+                className="mb3 outline-0 black bn pa2 pl3 pr3 br-pill shadow-1 bg-white w-80"
+                placeholder="search"
+            />
             <TableContainer sx={{ maxHeight: 400 }}>
                 <Table stickyHeader>
                     <TableHead>
                         <TableRow>
                             <TableCell>Name</TableCell>
-                            <TableCell>Research Topic</TableCell>
+                            <TableCell>Research</TableCell>
                             <TableCell>Contact</TableCell>
                         </TableRow>
                     </TableHead>

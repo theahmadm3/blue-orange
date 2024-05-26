@@ -50,7 +50,10 @@ function HeroSection() {
             >
                 <div className="overlay vh-75 pl5-l pt5-l">
                         <h1 className={`fade-in white ${showHeading1 ? 'visible' : 'hidden'}`}>
-                            Civil Engineering PhD Students
+                            PhD Lab
+                        </h1>
+                        <h1 className={`fade-in white ${showHeading1 ? 'visible' : 'hidden'}`}>
+                            Civil Engineering PhD Candidates
                         </h1>
                         <h2 className={`fade-in white ${showHeading2 ? 'visible' : 'hidden'}`}>
                             Meet Our Talented Researchers...
