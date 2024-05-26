@@ -1,5 +1,4 @@
-import { Avatar, Group, Text } from '@mantine/core';
-import { Table, TableCell, TableContainer, TableHead, TableRow, TableBody } from '@mui/material';
+import { Table, TableCell, TableContainer, TableHead, TableRow, TableBody, Avatar } from '@mui/material';
 
 import { students } from '../data/students';
 import { Link } from 'react-router-dom';
@@ -8,46 +7,44 @@ function Students() {
     const rows = students.map((student) => (
         <TableRow key={student.name}>
             <TableCell>
-                <Group gap="sm">
-                    <Avatar size={40} src={student.avatar} radius={40} />
-                    <div>
-                        <Text fz="sm" fw={500}>
-                            {student.id === 1 ? student.name : (
-                                <Link to={`student/${student.id}`} className='link black'>
-                                    {student.name}
-                                </Link>
-                            )}
-                        </Text>
-
+                <Link to={`student/${student.id}`} className='link black inline-flex justify-between items-center'>
+                    <Avatar src={student.avatar} />
+                    <div className='ml2'>
+                        <p className=''>{student.name}</p>
                     </div>
-                </Group>
+                </Link>
             </TableCell>
             <TableCell>
-                <Text fz="xs" c="dimmed">
+                <p>
                     {student.topic}
-                </Text>
+                </p>
             </TableCell>
             <TableCell>
-                <Text fz="sm">{student.email}</Text>
+                <p >{student.email}</p>
             </TableCell>
         </TableRow>
     ));
 
     return (
-        <section id="students w-100 flex flex-column students-center justify-center">
+        <section id="w-100">
             <h1 className="tc w-100 bg-white">Our Candidates</h1>
-            <input
-                type="search"
-                className="mb3 outline-0 black bn pa2 pl3 pr3 br-pill shadow-1 bg-white w-80"
-                placeholder="search"
-            />
+            <div className='w-100 inline-flex justify-center items-center pa2'>
+                <div className='ba br-pill pl2 pr2 pa1 w-40-l w-60-m w-80 inline-flex justify-start items-center'>
+                    <i className="material-icons">search</i>
+                    <input
+                        type="search"
+                        className="bn outline-0 w-90"
+                        placeholder="search"
+                    />
+                </div>
+            </div>
             <TableContainer sx={{ maxHeight: 400 }}>
                 <Table stickyHeader>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Name</TableCell>
-                            <TableCell>Research</TableCell>
-                            <TableCell>Contact</TableCell>
+                            <TableCell style={{ fontWeight: 'bold', color: 'black' }}>Name</TableCell>
+                            <TableCell style={{ fontWeight: 'bold', color: 'black' }}>Research Area</TableCell>
+                            <TableCell style={{ fontWeight: 'bold', color: 'black' }}>Contact</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>{rows}</TableBody>
