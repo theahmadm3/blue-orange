@@ -1,66 +1,59 @@
+// /src/components/HeroSection.jsx
 import { useState, useEffect } from 'react';
+import wow from '../assets/images/cvestudents.jpeg';
 
-import wow from '../assets/images/cvestudents.jpeg'
 function HeroSection() {
     const sectionStyles = {
+        position: 'relative',
         backgroundImage: `url(${wow})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         minHeight: '450px',
-    }
-    // const images = [
-    //     'https://example.com/image1.jpg',
-    //     'https://example.com/image2.jpg',
-    //     'https://example.com/image3.jpg',
-    //     'https://example.com/image4.jpg',
-    //     'https://example.com/image5.jpg',
-    // ];
+        color: 'white',
+        padding: '2rem',
+    };
 
-    // const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const overlayStyles = {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Black overlay with 50% opacity
+        zIndex: 1,
+    };
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    //     }, 5000); // Change image every 5 seconds
-    //     return () => clearInterval(interval);
-    // }, [images.length]);
+    const contentStyles = {
+        position: 'relative',
+        zIndex: 2,
+    };
+
     const [showHeading1, setShowHeading1] = useState(false);
     const [showHeading2, setShowHeading2] = useState(false);
 
     useEffect(() => {
-        // Show h1 after component mounts
         setShowHeading1(true);
-
-        // Show h2 after a delay
         const timer = setTimeout(() => {
             setShowHeading2(true);
-        }, 2000);
+        }, 1200);
 
-        // Cleanup timer if component unmounts before the timer ends
         return () => clearTimeout(timer);
     }, []);
 
     return (
-
-        <section
-            className="w-100"
-            id='home'
-            style={sectionStyles}
-        >
-            <div className="overlay white pl5-l pt5-l" style={{ minHeight: '450px', }}>
-                <h1 className={`fade-in white ${showHeading1 ? 'visible' : 'hidden'}`}>
-                    PhD Lab
-                </h1>
-                <h1 className={`fade-in white ${showHeading1 ? 'visible' : 'hidden'}`}>
+        <section className="w-100 pa2" id='home' style={sectionStyles}>
+            <div style={overlayStyles}></div>
+            <div style={contentStyles}>
+                <h1 className={`fade-in ${showHeading1 ? 'visible' : 'hidden'}`}>
                     Civil Engineering PhD Candidates
                 </h1>
-                <h2 className={`fade-in white ${showHeading2 ? 'visible' : 'hidden'}`}>
+                <h2 className={`fade-in ${showHeading2 ? 'visible' : 'hidden'}`}>
                     Meet Our Talented Researchers...
                 </h2>
             </div>
         </section>
-
     );
 }
 

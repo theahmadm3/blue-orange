@@ -5,12 +5,12 @@ import Students from '../components/Students'
 
 function LandingPage() {
     return (
-        <main>
+        <>
             <HeroSection />
             <Story />
             <Researches />
             <Students />
-        </main>
+        </>
     )
 }
 

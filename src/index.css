@@ -47,6 +47,9 @@ h1 {
 	.flex-column-s {
 		flex-direction: column;
 	}
+	.tc-s{
+		text-align: center;
+	}
 }
 .fade-in {
 	opacity: 0;
