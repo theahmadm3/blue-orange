@@ -1,21 +1,23 @@
 import { Link } from "react-router-dom"
-import nileLogoLg from '../assets/images/nilelogolarge.png'
+import nileLogoLg from '../assets/images/nilelogolarge.svg'
 import nileLogoSm from '../assets/images/nilelogosmall.png'
 
 function Header() {
     return (
-        <header className="z-5 pa2 inline-flex justify-between items-center w-100 center bg-white pl5-l pr5-l sticky top-0">
-            <Link to="/" className="link" style={{outline:'none'}}>
-                <img src={nileLogoLg} className="w-40 dn-s" />
-                <img src={nileLogoSm} className="w-40 dn-ns" />
-            </Link>
-            <div className="dn-s">
-                <Link to="/#about" className="f4 black pa3 link dim">About</Link>
-                <Link to="/#projects" className="f4 black pa3 link dim">Projects</Link>
-                <Link to="/#contact" className="f4 black pa3 link dim">Contact</Link>
-                <Link to="/#students" className="f4 black pa3 link dim">Students</Link>
-            </div>
-        </header>
+        <>
+            <header className="z-5 pa3 inline-flex justify-between items-center w-100 center bg-white pl5-l pr5-l sticky top-0 bg-dark-blue">
+                <Link to="/" className="link" style={{ outline: 'none' }}>
+                    <img src={nileLogoLg} className="w-50 dn-s" />
+                    <img src={nileLogoSm} className="dn-ns" />
+                </Link>
+                <div className="dn-s">
+                    <Link style={{ outline: 'none' }} to="/#about" className="f4 white pa3 link pointer dim">About</Link>
+                    <Link style={{ outline: 'none' }} to="/#projects" className="f4 white pa3 link pointer dim">Researches</Link>
+                    <Link style={{ outline: 'none' }} to="/#contact" className="f4 white pa3 link pointer dim">Contact</Link>
+                    <Link style={{ outline: 'none' }} to="/#students" className="f4 white pa3 link pointer dim">Candidates</Link>
+                </div>
+            </header>
+        </>
     )
 }
 
