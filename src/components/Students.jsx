@@ -1,10 +1,28 @@
+// /src/pages/Students.jsx
+import React, { useState, useEffect } from 'react';
 import { Table, TableCell, TableContainer, TableHead, TableRow, TableBody, Avatar } from '@mui/material';
-
-import { students } from '../data/students';
 import { Link } from 'react-router-dom';
+import { students } from '../data/students';
 
 function Students() {
-    const rows = students.map((student) => (
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filteredStudents, setFilteredStudents] = useState(students);
+
+    useEffect(() => {
+        setFilteredStudents(
+            students.filter(student =>
+                student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                student.topic.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                student.email.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+        );
+    }, [searchTerm]);
+
+    const handleSearchChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const rows = filteredStudents.map((student) => (
         <TableRow hover key={student.name}>
             <TableCell>
                 <Link to={student.id === 1 ? '#' : `student/${student.id}/#profile`} className='outline-0 link color-inherit inline-flex justify-between items-center' style={{ outline: 'none' }}>
@@ -35,6 +53,8 @@ function Students() {
                         type="search"
                         className="bn outline-0 w-90 pt2 pb2"
                         placeholder="search"
+                        value={searchTerm}
+                        onChange={handleSearchChange}
                     />
                 </div>
             </div>
@@ -43,7 +63,7 @@ function Students() {
                     <TableHead>
                         <TableRow>
                             <TableCell style={{ fontWeight: 'bold' }}>Name</TableCell>
-                            <TableCell style={{ fontWeight: 'bold' }}>Research Area</TableCell>
+                            <TableCell style={{ fontWeight: 'bold' }}>Research Title</TableCell>
                             <TableCell style={{ fontWeight: 'bold' }}>Contact</TableCell>
                         </TableRow>
                     </TableHead>
