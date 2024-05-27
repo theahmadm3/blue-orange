@@ -6,9 +6,9 @@ function Researches() {
     const images = [image1, image2, image3];
 
     return (
-        <section className="pa2 flex flex-column justify-between" id="projects">
-            <h1 className="w-100 tc">Some of our researches</h1>
-            <div className="mt2 mb2 pb2 overflow-auto inline-flex justify-between" style={{ minHeight: '400px' }}>
+        <section className="pa2 overlay flex flex-column justify-between" id="projects">
+            <h1 className="w-100 tc white">Some of our researches</h1>
+            <div className="mt2 shadow-1 pa1 br3 mb2 pb2 overflow-auto inline-flex justify-between" style={{ minHeight: '400px' }}>
                 {images.map((research, index) => (
                     <div
                         key={index}

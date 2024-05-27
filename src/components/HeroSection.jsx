@@ -42,25 +42,25 @@ function HeroSection() {
     }, []);
 
     return (
-        
-            <section
-                className="w-100 flex flex-column justify-center"
-                id='home'
-                style={sectionStyles}
-            >
-                <div className="overlay white vh-75 pl5-l pt5-l">
-                        <h1 className={`fade-in white ${showHeading1 ? 'visible' : 'hidden'}`}>
-                            PhD Lab
-                        </h1>
-                        <h1 className={`fade-in white ${showHeading1 ? 'visible' : 'hidden'}`}>
-                            Civil Engineering PhD Candidates
-                        </h1>
-                        <h2 className={`fade-in white ${showHeading2 ? 'visible' : 'hidden'}`}>
-                            Meet Our Talented Researchers...
-                        </h2>
-                </div>
-            </section>
-        
+
+        <section
+            className="w-100"
+            id='home'
+            style={sectionStyles}
+        >
+            <div className="overlay white pl5-l pt5-l" style={{ minHeight: '450px', }}>
+                <h1 className={`fade-in white ${showHeading1 ? 'visible' : 'hidden'}`}>
+                    PhD Lab
+                </h1>
+                <h1 className={`fade-in white ${showHeading1 ? 'visible' : 'hidden'}`}>
+                    Civil Engineering PhD Candidates
+                </h1>
+                <h2 className={`fade-in white ${showHeading2 ? 'visible' : 'hidden'}`}>
+                    Meet Our Talented Researchers...
+                </h2>
+            </div>
+        </section>
+
     );
 }
 

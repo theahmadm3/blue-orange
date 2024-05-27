@@ -44,6 +44,9 @@ h1 {
 	.dn-s {
 		display: none;
 	}
+	.flex-column-s {
+		flex-direction: column;
+	}
 }
 .fade-in {
 	opacity: 0;
