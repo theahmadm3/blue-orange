@@ -28,11 +28,11 @@ h1 {
 	line-height: 1.1;
 }
 
-.w-98{
+.w-98 {
 	width: 98%;
 }
-.sticky{
-	position:sticky;
+.sticky {
+	position: sticky;
 }
 /* @media (prefers-color-scheme: light) {
 	:root {
@@ -40,29 +40,29 @@ h1 {
 		background-color: #ffffff;
 	}
 } */
-@media (max-width: 768px) {
+@media (max-width: 30em) {
 	.dn-s {
 		display: none;
 	}
 }
 .fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
 }
 .fade-in-2 {
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+	opacity: 0;
+	transition: opacity 1.5s ease-in-out;
 }
 
 .fade-in.visible {
-    opacity: 1;
+	opacity: 1;
 }
 
 .fade-in.hidden {
-    opacity: 0;
+	opacity: 0;
 }
 .overlay {
 	/* height:100%; */
-	width:100%;
+	width: 100%;
 	background: rgba(25, 25, 55, 0.47);
 }

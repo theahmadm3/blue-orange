@@ -5,7 +5,7 @@ import nileLogoSm from '../assets/images/nilelogosmall.png'
 function Header() {
     return (
         <header className="z-5 pa2 inline-flex justify-between items-center w-100 center bg-white pl5-l pr5-l sticky top-0">
-            <Link to="/" className="outline-0 link black" style={{outline:'none'}}>
+            <Link to="/" className="link" style={{outline:'none'}}>
                 <img src={nileLogoLg} className="w-40 dn-s" />
                 <img src={nileLogoSm} className="w-40 dn-ns" />
             </Link>

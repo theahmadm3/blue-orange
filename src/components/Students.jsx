@@ -7,7 +7,7 @@ function Students() {
     const rows = students.map((student) => (
         <TableRow hover key={student.name}>
             <TableCell>
-                <Link to={`student/${student.id}/#profile`} className='outline-0 link color-inherit inline-flex justify-between items-center'>
+                <Link to={student.id === 1 ? '#' : `student/${student.id}/#profile`} className='outline-0 link color-inherit inline-flex justify-between items-center' style={{ outline: 'none' }}>
                     <Avatar src={student.avatar} />
                     <div className='ml2'>
                         <p className=''>{student.name}</p>
