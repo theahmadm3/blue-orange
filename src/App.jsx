@@ -30,8 +30,6 @@ function App() {
       <Header />
       <Outlet />
       <Footer />
-      <div className='bg-transparent w-100 pa2 dn-ns'>
-      </div>
     </div>
   )
 }

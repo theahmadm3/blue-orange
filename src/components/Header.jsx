@@ -1,10 +1,10 @@
 // /src/components/Header.jsx
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Drawer, List, ListItem, ListItemText, useMediaQuery } from '@mui/material';
+import { AppBar, Toolbar, Drawer, List, ListItem, useMediaQuery } from '@mui/material';
 
 import nileLogoLg from '../assets/images/nilelogolarge.svg';
-import nileLogoSm from '../assets/images/nilelogosmall.png';
+
 import { styled, useTheme } from '@mui/material/styles';
 
 
@@ -58,8 +58,7 @@ function Header() {
             <AppBar position="sticky">
                 <Toolbar className="pa3 bg-dark-blue inline-flex justify-between items-center w-100 center">
                     <Link to="/" className="link" style={{ outline: 'none' }}>
-                        <img src={nileLogoLg} className="w-50 dn-s" />
-                        <img src={nileLogoSm} className="w-40 dn-ns" />
+                        <img src={nileLogoLg} className="w-50" />
                     </Link>
                     {isSmallScreen ? (
                         <>
