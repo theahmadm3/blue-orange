@@ -142,9 +142,9 @@ h1 {
 }
 
 .in-view2 .slide-up {
-	animation: slideUp 1.5s ease-in-out forwards;
+	animation: slideUp 2s ease-in-out forwards;
 }
 
 .in-view2 .slide-in-left {
-	animation: slideInLeft 1.5s ease-in-out forwards;
+	animation: slideInLeft 2s ease-in-out forwards;
 }
