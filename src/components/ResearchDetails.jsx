@@ -1,5 +1,5 @@
 const ResearchDetails = ({ abstract, introduction, methodology, findings, conclusion }) => (
-  <section className="pa4">
+  <section className="pa4 w-60-l center">
     <h3 className="f4">Abstract</h3>
     <p>{abstract}</p>
     <h3 className="f4">Detailed Description</h3>

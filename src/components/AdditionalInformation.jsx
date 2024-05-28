@@ -1,5 +1,5 @@
 const AdditionalInformation = ({ publications, presentations, supervisors, relatedLinks }) => (
-  <section className="pa4 bg-light-gray">
+  <section className="pa4 bg-light-gray w-60-l center">
     <h3 className="f4">Publications</h3>
     <ul className="list pl0">
       {publications.map((pub, index) => <li key={index} className="pv2">{pub}</li>)}
