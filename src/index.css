@@ -47,7 +47,7 @@ h1 {
 	.flex-column-s {
 		flex-direction: column;
 	}
-	.tc-s{
+	.tc-s {
 		text-align: center;
 	}
 }
@@ -71,4 +71,80 @@ h1 {
 	/* height:100%; */
 	width: 100%;
 	background: rgba(25, 25, 55, 0.47);
+}
+
+/* animations.css */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes scaleUp {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.05);
+	}
+}
+
+.section-fade-in {
+	opacity: 0;
+	animation: fadeIn 1s ease-in-out forwards;
+}
+
+.image-container {
+	transition: transform 0.3s ease-in-out;
+	opacity: 0;
+}
+
+.image-container.in-view {
+	animation: fadeIn 1.5s ease-in-out forwards;
+	opacity: 1;
+}
+
+.image-container:hover {
+	animation: scaleUp 0.3s forwards;
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInLeft {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.slide-up {
+	opacity: 0;
+}
+
+.slide-in-left {
+	opacity: 0;
+}
+
+.in-view2 .slide-up {
+	animation: slideUp 1.5s ease-in-out forwards;
+}
+
+.in-view2 .slide-in-left {
+	animation: slideInLeft 1.5s ease-in-out forwards;
 }
