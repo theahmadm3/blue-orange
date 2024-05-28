@@ -9,7 +9,7 @@ function HeroSection() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        minHeight: '450px',
+        minHeight: '485px',
         color: 'white',
         padding: '2rem',
     };
@@ -37,17 +37,17 @@ function HeroSection() {
         setShowHeading1(true);
         const timer = setTimeout(() => {
             setShowHeading2(true);
-        }, 1200);
+        }, 1000);
 
         return () => clearTimeout(timer);
     }, []);
 
     return (
-        <section className="w-100 pa2" id='home' style={sectionStyles}>
+        <section className="w-100 pa2 pb4" id='home' style={sectionStyles}>
             <div style={overlayStyles}></div>
             <div style={contentStyles}>
                 <h1 className={`fade-in ${showHeading1 ? 'visible' : 'hidden'}`}>
-                    Civil Engineering PhD Candidates
+                    PhD Lab <br /> Civil Engineering PhD Candidates
                 </h1>
                 <h2 className={`fade-in ${showHeading2 ? 'visible' : 'hidden'}`}>
                     Meet Our Talented Researchers...
