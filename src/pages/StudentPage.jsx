@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { students } from '../data/students';
 import ProfileSection from '../components/ProfileSection';
 import ResearchDetails from '../components/ResearchDetails';
@@ -9,7 +9,12 @@ function StudentPage() {
   const student = students.find(student => student.id === parseInt(id));
 
   if (!student) {
-    return <div>Student not found</div>;
+    return <div className='w-100 flex flex-column items-center justify-center f2' style={{ minHeight: '400px' }}>
+      <p className=''>Candidate not found</p>
+      <Link to='/' className="link black underline dim">
+        <h6>Go back to Homepage</h6>
+      </Link>
+    </div>;
   }
 
   return (

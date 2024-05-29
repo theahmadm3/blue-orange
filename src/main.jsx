@@ -5,6 +5,7 @@ import './index.css'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 import LandingPage from './pages/LandingPage.jsx'
 import StudentPage from './pages/StudentPage.jsx'
+import Error404 from './pages/Error404.jsx'
 
 
 const router = createHashRouter([
@@ -22,10 +23,14 @@ const router = createHashRouter([
       },
     ]
   },
+  {
+    path: '*',
+    element: <Error404 />
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
