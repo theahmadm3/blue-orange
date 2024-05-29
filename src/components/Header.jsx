@@ -36,6 +36,7 @@ function Header() {
             onClick={toggleDrawer(false)}
             onKeyDown={toggleDrawer(false)}
         >
+            <h2 className='pl3 pr3'>Civil Engineering PhD</h2>
             <List>
                 <ListItem component={Link} to="/#about">
                     <p className='black'>About</p>
@@ -58,7 +59,7 @@ function Header() {
             <AppBar position="sticky">
                 <Toolbar className="pa3 bg-dark-blue inline-flex justify-between items-center w-100 center">
                     <Link to="/" className="link" style={{ outline: 'none' }}>
-                        <img src={nileLogoLg} className="w-50" />
+                        <img src={nileLogoLg} className="w-70" />
                     </Link>
                     {isSmallScreen ? (
                         <>
@@ -72,12 +73,15 @@ function Header() {
                             </Drawer>
                         </>
                     ) : (
-                        <div className="dn-s">
-                            <Link style={{ outline: 'none' }} to="/#about" className="f4 white pa3 link pointer dim">About</Link>
-                            <Link style={{ outline: 'none' }} to="/#projects" className="f4 white pa3 link pointer dim">Researches</Link>
-                            <Link style={{ outline: 'none' }} to="/#contact" className="f4 white pa3 link pointer dim">Contact</Link>
-                            <Link style={{ outline: 'none' }} to="/#students" className="f4 white pa3 link pointer dim">Candidates</Link>
-                        </div>
+                        <>
+                            <h2 className='dn-m'>Civil Engineering PhD</h2>
+                            <div className="dn-s">
+                                <Link style={{ outline: 'none' }} to="/#about" className="f4 white pa3 link pointer dim">About</Link>
+                                <Link style={{ outline: 'none' }} to="/#projects" className="f4 white pa3 link pointer dim">Researches</Link>
+                                <Link style={{ outline: 'none' }} to="/#contact" className="f4 white pa3 link pointer dim">Contact</Link>
+                                <Link style={{ outline: 'none' }} to="/#students" className="f4 white pa3 link pointer dim">Candidates</Link>
+                            </div>
+                        </>
                     )}
                 </Toolbar>
             </AppBar>

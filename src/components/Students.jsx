@@ -72,12 +72,12 @@ function Students() {
         <section id="students" className='w-100' ref={sectionRef2}>
             <h1 className="tc w-100 slide-up">Our Candidates</h1>
             <div className='w-100 inline-flex justify-center items-center pa2 slide-in-left'>
-                <div className='ba br-pill pl2 pr2 pa1 w-40-l w-60-m w-80 inline-flex justify-start items-center'>
+                <div className='ba b--moon-gray br-pill pl2 pr2 pa1 w-40-l w-60-m w-80 inline-flex justify-start items-center'>
                     <i className="material-icons">search</i>
                     <input
-                        type="search"
+                        type="Search"
                         className="bn outline-0 w-90 pt2 pb2"
-                        placeholder="search"
+                        placeholder="Search for a Candidate"
                         value={searchTerm}
                         onChange={handleSearchChange}
                     />
