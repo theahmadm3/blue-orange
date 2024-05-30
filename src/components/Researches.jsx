@@ -1,4 +1,3 @@
-// /src/components/Researches.jsx
 import { useEffect, useRef } from 'react';
 import image1 from '../assets/images/research1.jpg';
 import image2 from '../assets/images/research2.jpg';
@@ -34,7 +33,7 @@ function Researches() {
 
     return (
         <section className="pa2 overlay flex flex-column justify-between" id="projects" ref={sectionRef}>
-            <h1 className="w-100 tc white section-fade-in image-container">Some of our researches</h1>
+            <h1 className="w-100 tc white section-fade-in image-container">Some of our Research</h1>
             <div className="mt2 shadow-1 pa1 br3 mb2 pb2 overflow-auto inline-flex justify-between" style={{ minHeight: '400px' }}>
                 {images.map((research, index) => (
                     <div
