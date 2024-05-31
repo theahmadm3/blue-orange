@@ -58,7 +58,7 @@ function Footer() {
                     <li>CONTACT</li>
                     <li>Sitemap</li>
                 </ul>
-                <h2 id="contact" className='w-100 tc'>Contact US</h2>
+                <h2 id="contactus" className='w-100 tc'>Contact US</h2>
                 <div className='inline-flex pl3 pr3 w-100'>
                     <div className='pt3'>
                         <i className='material-icons mr2'>place</i>

@@ -47,7 +47,7 @@ function Header() {
                 <ListItem component={Link} to="/#activity">
                     <p className='black'>Activity</p>
                 </ListItem>
-                <ListItem component={Link} to="/#contact">
+                <ListItem component={Link} to="/#contactus">
                     <p className='black'>Contact</p>
                 </ListItem>
                 <ListItem component={Link} to="/#students">
