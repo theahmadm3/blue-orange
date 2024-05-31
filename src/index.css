@@ -152,3 +152,26 @@ thead, th {
 .in-view2 .slide-in-left {
 	animation: slideInLeft 2s ease-in-out forwards;
 }
+/* RecentActivity.css */
+.activity-card {
+    width: 100%;
+    max-width: 400px;
+}
+
+.activity-image {
+    width: 100%;
+}
+
+.activity-details {
+    text-align: left;
+}
+
+.activity-date {
+    font-size: 0.875rem;
+}
+
+.activity-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
