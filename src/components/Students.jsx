@@ -27,7 +27,7 @@ function Students() {
     const rows = filteredStudents.map((student) => (
         <TableRow hover key={student.name}>
             <TableCell>
-                <Link to={student.id === 1 ? '#' : `student/${student.id}/#profile`} className='outline-0 link color-inherit inline-flex justify-between items-center' style={{ outline: 'none' }}>
+                <Link to={`student/${student.id}/#profile`} className='outline-0 link color-inherit inline-flex justify-between items-center' style={{ outline: 'none' }}>
                     <Avatar className='shadow-1' src={student.avatar} />
                     <div className='ml2'>
                         <p className=''>{student.name}</p>
@@ -69,15 +69,15 @@ function Students() {
     }, []);
 
     return (
-        <section id="students" className='w-100' ref={sectionRef2}>
+        <section id="students" className='w-100 bg-light-gray' ref={sectionRef2}>
             <h1 className="tc w-100 slide-up">Our Candidates</h1>
             <div className='w-100 inline-flex justify-center items-center pa2 slide-in-left'>
                 <div className='ba b--moon-gray br-pill pl2 pr2 pa1 w-40-l w-60-m w-80 inline-flex justify-start items-center'>
                     <i className="material-icons">search</i>
                     <input
                         type="Search"
-                        className="bn outline-0 w-90 pt2 pb2"
-                        placeholder="Search for a Candidate"
+                        className="bn bg-transparent outline-0 w-90 pt2 pb2"
+                        placeholder="Search by name, email or topic"
                         value={searchTerm}
                         onChange={handleSearchChange}
                     />

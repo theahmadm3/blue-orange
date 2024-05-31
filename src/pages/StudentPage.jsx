@@ -19,6 +19,11 @@ function StudentPage() {
 
   return (
     <div>
+      <div id="profile" className='pa2 flex items-center justify-center'>
+        <Link to='/' style={{ outline: '0' }} className='w-60-l center black link dim pa2 inline-flex items-center pointer'>
+          <i className="material-icons">arrow_left</i><span>Back</span>
+        </Link>
+      </div>
       <ProfileSection
         photo={student.avatar}
         name={student.name}

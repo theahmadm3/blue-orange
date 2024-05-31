@@ -4,14 +4,27 @@ export const students = [
     {
         id: 1,
         name: 'Ibrahim',
-        email: ' 20233539@nileuniversity.edu.ng',
-        topic: 'Evaluating pavement...',
+        email: '20233539@nileuniversity.edu.ng',
         avatar: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png',
-        supervisor: 'Prof. Abdulhameed Danjuma Mambo',
-        supervisor2: 'Dr. Abubakar Dayyabu',
+        topic: 'No data yet',
+        supervisor: 'No data yet',
+        supervisor2: 'No data yet',
+        abstract: 'No data yet',
+        introduction: 'No data yet',
+        methodology: 'No data yet',
+        findings: 'No data yet',
+        conclusion: 'No data yet',
+        publications: [
+            'No data yet',
+            'No data yet'
+        ],
+        presentations: [
+            'No data yet',
+            'No data yet'
+        ],
         publicationLink: [
-            { link: 'https://www.researchgate.net/profile/Musa-Umar-Kolo/research' },
-            { link: 'https://scholar.google.com/citations?hl=en&user=5DZa8PwAAAAJ' }
+            { name: 'No data yet', url: 'No data yet' },
+            { name: 'No data yet', url: 'No data yet' }
         ],
     },
     {

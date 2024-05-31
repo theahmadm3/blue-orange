@@ -42,7 +42,10 @@ function Header() {
                     <p className='black'>About</p>
                 </ListItem>
                 <ListItem component={Link} to="/#projects">
-                    <p className='black'>Researches</p>
+                    <p className='black'>Research</p>
+                </ListItem>
+                <ListItem component={Link} to="/#activity">
+                    <p className='black'>Activity</p>
                 </ListItem>
                 <ListItem component={Link} to="/#contact">
                     <p className='black'>Contact</p>
@@ -77,7 +80,8 @@ function Header() {
                             <h2 className='dn-m'>Civil Engineering PhD</h2>
                             <div className="dn-s">
                                 <Link style={{ outline: 'none' }} to="/#about" className="f4 white pa3 link pointer dim">About</Link>
-                                <Link style={{ outline: 'none' }} to="/#projects" className="f4 white pa3 link pointer dim">Researches</Link>
+                                <Link style={{ outline: 'none' }} to="/#projects" className="f4 white pa3 link pointer dim">Research</Link>
+                                <Link style={{ outline: 'none' }} to="/#activity" className="f4 white pa3 link pointer dim">Activity</Link>
                                 <Link style={{ outline: 'none' }} to="/#contact" className="f4 white pa3 link pointer dim">Contact</Link>
                                 <Link style={{ outline: 'none' }} to="/#students" className="f4 white pa3 link pointer dim">Candidates</Link>
                             </div>

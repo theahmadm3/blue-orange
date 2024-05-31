@@ -51,6 +51,10 @@ h1 {
 		text-align: center;
 	}
 }
+thead, th {
+	background:#00449e !important;
+	color:white !important;
+}
 .fade-in {
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
