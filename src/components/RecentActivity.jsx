@@ -11,17 +11,17 @@ function RecentActivity() {
                             style={{
                                 backgroundImage: `url(${research.image})`,
                                 height: '300px',
+                                width:'500px',
                                 backgroundSize: 'contain',
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
-                                borderRadius: '8px'
                             }}
                             className="activity-image"
                         ></div>
-                        <div className="activity-details bg-dark-gray pa3 br3 mt2">
+                        {/* <div className="activity-details bg-dark-gray pa3 br3 mt2">
                             <p className="activity-date white-60">{research.date}</p>
                             <h2 className="activity-title white">{research.title}</h2>
-                        </div>
+                        </div> */}
                     </div>
                 ))}
             </div>

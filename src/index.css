@@ -153,16 +153,16 @@ thead, th {
 	animation: slideInLeft 2s ease-in-out forwards;
 }
 /* RecentActivity.css */
-.activity-card {
+/* .activity-card {
     width: 100%;
     max-width: 400px;
-}
+} */
 
-.activity-image {
+/* .activity-image {
     width: 100%;
-}
+} */
 
-.activity-details {
+/* .activity-details {
     text-align: left;
 }
 
@@ -173,5 +173,4 @@ thead, th {
 .activity-title {
     font-size: 1.25rem;
     font-weight: bold;
-}
-
+} */
