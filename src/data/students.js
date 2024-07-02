@@ -1,5 +1,6 @@
 import koloImage from '../assets/images/umarkolo.jpeg'
 import ibraAliImage from '../assets/images/IbroAli.jpg'
+import maimunaImage from '../assets/images/stud_photo - Maimuna Yakubu.jfif'
 
 export const students = [
     {
@@ -23,11 +24,9 @@ export const students = [
         conclusion: 'No data yet',
         publications: [
             'No data yet',
-            'No data yet'
         ],
         presentations: [
             'No data yet',
-            'No data yet'
         ],
         publicationLink: [
             'No data yet'
@@ -57,6 +56,45 @@ export const students = [
         publicationLink: [
             { name: 'ResearchGate Profile', url: 'https://www.researchgate.net/profile/Musa-Umar-Kolo/research' },
             { name: 'Google Scholar Profile', url: 'https://scholar.google.com/citations?hl=en&user=5DZa8PwAAAAJ' }
+        ],
+    },
+    {
+        id: 3,
+        name: 'Engr. Maimuna Abdulsalam Yakubu  ',
+        email: '20232909@nileuniversity.edu.ng',
+        avatar: maimunaImage,
+        topic: `Construction management and sustainability in the Nigerian construction industry`,
+        supervisor: 'No data yet',
+        supervisor2: '',
+        abstract: `Engr Maimuna Abdulsalam Yakubu's PhD research, titled "Breaking Barriers: Exploring Gender Equality and Empowerment strategies for women in Nigeria Construction Industry," delves into the critical examination of the challenges and opportunities for women in the Nigerian construction sector. This study aims to identify systemic barriers hindering gender equality and to propose strategic measures to empower women and promote a more inclusive industry. Through comprehensive analysis and stakeholder engagement, the research aspires to foster a transformative shift towards equitable practices in the construction field`,
+        introduction: `The construction industry in Nigeria, like many others globally, has been predominantly male-dominated.
+ Gender equality is essential for the sustainable development and growth of the industry.
+ Understanding the barriers and opportunities for women in this sector can lead to more inclusive practices.
+Objectives:
+ To identify the barriers faced by women in the Nigerian construction industry.
+ To explore strategies for promoting gender equality and empowering women in this sector
+ To propose recommendations for fostering a more inclusive and equitable construction industry.`,
+        methodology: ` Research Design: This study will use a mixed-methods approach to gather both qualitative and quantitative data.
+ Data collection: will use interview ,survey and case study method
+ Data analysis: will use statistical and thematic analysis
+Expected Outcomes:
+ The research aims to provide insights into the challenges.`,
+        findings: ` The research is expected to identify significant barriers to gender equality in Nigeria construction industry. 
+ Findings will provide actionable recommendations for policy makers, industry stakeholders, and educational institutions
+`,
+        conclusion: `This research aims to provide
+ A comprehensive understanding of the barriers and opportunities for gender equality in the Nigerian construction industry.
+ By identifying effective strategies and making actionable recommendations, 
+ The study seeks to foster a more inclusive and equitable industry
+`,
+        publications: [
+            'No data yet',
+        ],
+        presentations: [
+            'No data yet',
+        ],
+        publicationLink: [
+            `No data yet`
         ],
     },
 ]
